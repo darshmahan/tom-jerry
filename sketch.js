@@ -4,6 +4,7 @@ var tom, tomImg1,tomImg2;
 var jerry, jerryImg1,jerryImg2;
 
 function preload() {
+  //load Image
     bg = loadImage("images/garden.png");
     tomImg1= loadAnimation("images/tomOne.png");
     tomImg2=loadAnimation("images/tomTwo.png","images/tomThree.png");
@@ -28,7 +29,7 @@ function setup(){
 }
 
 function draw() {
-
+// add animation
     background(bg);
 
     if(tom.x - jerry.x < (tom.width - jerry.width)/2)
@@ -48,7 +49,7 @@ function draw() {
 
 
 function keyPressed(){
-
+// add velocity
     if(keyCode === LEFT_ARROW){
         tom.velocityX = -5; 
         tom.addAnimation("tomRunning", tomImg2);
